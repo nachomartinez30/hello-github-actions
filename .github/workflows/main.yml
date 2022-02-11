@@ -1,2 +1,11 @@
 name: un Workflow para mi archivo Hello World
 on: push
+jobs:
+  build:
+    name: accion Hello world 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./action-a
+        with:
+          MY_NAME: "Nacho"
